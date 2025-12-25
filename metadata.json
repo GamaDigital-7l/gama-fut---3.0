@@ -1,0 +1,5 @@
+{
+  "name": "GAMA FUT - 3.0",
+  "description": "A complete SaaS for managing football championships with multi-tenancy, real-time scoring, and role-based access control.",
+  "requestFramePermissions": []
+}
