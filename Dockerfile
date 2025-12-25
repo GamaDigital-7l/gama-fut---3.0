@@ -5,7 +5,6 @@ WORKDIR /app
 
 # Copy package.json and install dependencies
 COPY package.json .
-# Note: package-lock.json is not explicitly copied to avoid build failure if missing locally.
 RUN npm install
 
 # Copy the rest of the application code
@@ -16,6 +15,9 @@ RUN npm run build
 
 # Stage 2: Serve the application using a lightweight Nginx server
 FROM nginx:alpine as production
+
+# Copy the custom Nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the built files from the builder stage to Nginx's default static directory
 COPY --from=builder /app/dist /usr/share/nginx/html
