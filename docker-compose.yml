@@ -8,11 +8,5 @@ services:
       dockerfile: Dockerfile
     ports:
       # Mapeia a porta 80 do container (Nginx) para a porta 8080 do seu host.
-      # Você pode mudar 8080 para qualquer porta livre no seu Zima OS.
       - "8080:80"
-    # Opcional: Se você externalizar as chaves do Supabase no futuro,
-    # elas seriam definidas aqui:
-    # environment:
-    #   SUPABASE_URL: "..."
-    #   SUPABASE_ANON_KEY: "..."
     restart: always
