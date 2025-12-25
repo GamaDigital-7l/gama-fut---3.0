@@ -10,13 +10,16 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Explicitly clean previous build artifacts (Crucial for ensuring fresh content)
+RUN rm -rf dist
+
 # Build the application (output goes to /app/dist)
 RUN npm run build
 
 # Stage 2: Serve the application using a lightweight Nginx server
 FROM nginx:alpine as production
 
-# Copy the custom Nginx configuration
+# Copy the custom Nginx configuration for SPA routing
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the built files from the builder stage to Nginx's default static directory
