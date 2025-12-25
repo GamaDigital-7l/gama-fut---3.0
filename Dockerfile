@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Copy package.json and install dependencies
 COPY package.json .
-COPY package-lock.json .
+# Note: package-lock.json is not explicitly copied to avoid build failure if missing locally.
 RUN npm install
 
 # Copy the rest of the application code
