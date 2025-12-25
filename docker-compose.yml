@@ -7,6 +7,6 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      # Mapeia a porta 80 do container (Nginx) para a porta 8080 do seu host.
-      - "8080:80"
+      # Mapeia a porta 80 do container (Nginx) para a porta 3150 do seu host.
+      - "3150:80"
     restart: always

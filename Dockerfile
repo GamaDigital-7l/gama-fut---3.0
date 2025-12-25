@@ -4,7 +4,6 @@ FROM node:20-alpine as builder
 WORKDIR /app
 
 # Copy package.json and install dependencies
-# Esta etapa é crucial para instalar as dependências
 COPY package.json .
 RUN npm install
 
@@ -26,7 +25,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copia os arquivos de build do estágio anterior para o Nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose the port Nginx runs on
+# Expose the port Nginx runs on (Porta interna do container)
 EXPOSE 80
 
 # Start Nginx
