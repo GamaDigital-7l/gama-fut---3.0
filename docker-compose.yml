@@ -7,6 +7,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      # Mapeia a porta 80 do container (Nginx) para a porta 3150 do seu host.
+      # Mapeia a porta 80 do container (Nginx) para a porta 3150 do seu host (Zima OS).
       - "3150:80"
+    # Define o nome da rede para facilitar a gestão no Zima OS (opcional, mas recomendado)
+    networks:
+      - default
     restart: always
+
+networks:
+  default:
+    driver: bridge

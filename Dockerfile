@@ -3,17 +3,17 @@ FROM node:20-alpine as builder
 
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Copia package.json e instala as dependências
 COPY package.json .
 RUN npm install
 
-# Copy the rest of the application code (incluindo src/, index.html, etc.)
+# Copia o restante do código da aplicação
 COPY . .
 
 # CRUCIAL: Limpa explicitamente qualquer build anterior para forçar o Vite a gerar conteúdo novo
 RUN rm -rf dist
 
-# Build the application (output goes to /app/dist)
+# Constrói a aplicação (o output vai para /app/dist)
 RUN npm run build
 
 # Stage 2: Serve the application using a lightweight Nginx server
@@ -25,8 +25,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copia os arquivos de build do estágio anterior para o Nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose the port Nginx runs on (Porta interna do container)
+# Expõe a porta 80 (porta interna do container)
 EXPOSE 80
 
-# Start Nginx
+# Inicia o Nginx
 CMD ["nginx", "-g", "daemon off;"]
