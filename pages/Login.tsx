@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { useNavigate } from 'react-router-dom';
@@ -33,7 +32,7 @@ const Login: React.FC = () => {
     <div className="flex items-center justify-center min-h-[80vh] px-4">
       <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl w-full max-w-md">
         <div className="text-center mb-8">
-           <h2 className="text-3xl font-black italic text-emerald-500 tracking-tighter">GAMA<span className="text-white">FUT</span></h2>
+           <img src="/logo.svg" alt="GAMA FUT Logo" className="w-24 h-auto mx-auto mb-4"/>
            <p className="text-slate-400 mt-2 text-sm">Área restrita para gestores e mesários.</p>
         </div>
         

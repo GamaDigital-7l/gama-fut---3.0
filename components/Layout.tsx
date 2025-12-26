@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { UserProfile, GlobalSponsor } from '../types';
 import { LogOut, LayoutDashboard, Trophy, MonitorPlay, User, Settings, Home, LogIn } from 'lucide-react';
@@ -42,8 +41,8 @@ const Layout: React.FC<LayoutProps> = ({ children, userProfile }) => {
             
             {/* Logo */}
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-black text-emerald-500 tracking-tighter italic flex-shrink-0">
-                GAMA<span className="text-white">FUT</span>
+              <Link to="/" className="flex items-center flex-shrink-0">
+                <img src="/logo.svg" alt="GAMA FUT Logo" className="h-8 w-auto"/>
               </Link>
               
               {/* Desktop Nav Links */}
