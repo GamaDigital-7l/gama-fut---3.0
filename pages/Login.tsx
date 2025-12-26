@@ -32,7 +32,7 @@ const Login: React.FC = () => {
     <div className="flex items-center justify-center min-h-[80vh] px-4">
       <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl w-full max-w-md">
         <div className="text-center mb-8">
-           <img src="/logo.svg" alt="GAMA FUT Logo" className="w-24 h-auto mx-auto mb-4"/>
+           <img src="/logo-gama.svg" alt="GAMA FUT Logo" className="w-24 h-auto mx-auto mb-4"/>
            <p className="text-slate-400 mt-2 text-sm">Área restrita para gestores e mesários.</p>
         </div>
         
