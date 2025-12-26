@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ({ children, userProfile }) => {
             {/* Logo */}
             <div className="flex items-center">
               <Link to="/" className="flex items-center flex-shrink-0">
-                <img src="/logo-gama.svg" alt="GAMA FUT Logo" className="h-8 w-auto"/>
+                <img src="/logo-gama.svg" alt="GAMA FUT Logo" className="h-10 w-auto"/>
               </Link>
               
               {/* Desktop Nav Links */}

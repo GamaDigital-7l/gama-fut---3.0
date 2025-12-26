@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../supabaseClient';
 import { Championship, GlobalSponsor } from '../types';
@@ -58,7 +57,7 @@ const PublicHome: React.FC = () => {
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24 sm:px-6 lg:px-8 text-center">
-                <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+                <h1 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
                     Transforme a gestão da sua<br/>
                     <span className="text-emerald-400">liga de futebol.</span>
                 </h1>
@@ -154,7 +153,7 @@ const PublicHome: React.FC = () => {
                             <div className="p-6 flex-1 flex flex-col">
                                 <h3 className="text-xl font-bold text-white mb-2 line-clamp-1">{champ.name}</h3>
                                 <div className="flex items-center gap-2 text-sm text-slate-400 mb-4 font-medium uppercase tracking-wide">
-                                    <MapPin size={14} className="text-emerald-500" /> 
+                                    <MapPin size={14} className="inline mr-1" /> 
                                     {champ.city ? `${champ.city}, ${champ.state}` : 'Local não definido'}
                                 </div>
                                 
