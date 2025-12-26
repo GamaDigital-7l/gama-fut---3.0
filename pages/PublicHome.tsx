@@ -57,9 +57,13 @@ const PublicHome: React.FC = () => {
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24 sm:px-6 lg:px-8 text-center">
+                
+                {/* LOGO */}
+                <img src="/logo-gama.svg" alt="GAMA FUT Logo" className="w-24 h-auto mx-auto mb-6"/>
+
                 <h1 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
-                    Transforme a gestão da sua<br/>
-                    <span className="text-emerald-400">liga de futebol.</span>
+                    Transforme a gestão do seu<br/>
+                    <span className="text-emerald-400">campeonato de futebol.</span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 px-4">
                     Súmulas profissionais, estatísticas em tempo real e a melhor experiência para organizadores e atletas.
