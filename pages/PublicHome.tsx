@@ -58,8 +58,8 @@ const PublicHome: React.FC = () => {
             
             <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24 sm:px-6 lg:px-8 text-center">
                 
-                {/* LOGO */}
-                <img src="/logo-gama.svg" alt="GAMA FUT Logo" className="w-24 h-auto mx-auto mb-6"/>
+                {/* LOGO - AUMENTADO */}
+                <img src="/logo-gama.svg" alt="GAMA FUT Logo" className="w-40 h-auto mx-auto mb-8"/>
 
                 <h1 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
                     Transforme a gestão do seu<br/>
